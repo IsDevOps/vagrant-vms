@@ -21,9 +21,9 @@ Vagrant.configure("2") do |config|
   
       # Provisioning for db01 using shell script
       db01.vm.provision "shell", inline: <<-SHELL
-        yum install -y wget unzip mariadb-server -y
-        systemctl start mariadb
-        systemctl enable mariadb
+       # yum install -y wget unzip mariadb-server -y
+        #systemctl start mariadb
+        #systemctl enable mariadb
     SHELL
     end
   end
