@@ -5,6 +5,8 @@ Vagrant.configure("2") do |config|
     rancher.vm.box = "ubuntu/bionic64"
     rancher.vm.hostname = "rancher"
     rancher.vm.network "private_network", type: "dhcp"
+    rancher.vm.network "forwarded_port", guest: 80, host: 8080
+    rancher.vm.network "forwarded_port", guest: 443, host: 8443
     rancher.vm.provider "virtualbox" do |vb|
       vb.memory = "2048"
       vb.cpus = 2
