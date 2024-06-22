@@ -27,7 +27,7 @@ Vagrant.configure("2") do |config|
         rancher/rancher:latest
 
       # Wait for Rancher to be up and running
-      sleep 60
+      sleep 120
     SHELL
   end
 
